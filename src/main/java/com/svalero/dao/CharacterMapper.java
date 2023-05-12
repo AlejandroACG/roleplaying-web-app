@@ -11,8 +11,8 @@ public class CharacterMapper implements RowMapper<Character> {
     @Override
     public Character map(ResultSet rs, StatementContext ctx) throws SQLException {
         PlayerDAO playerDAO = jdbi.onDemand(PlayerDAO.class);
-        Player player = playerDAO.getPlayer("PLAYER_ID");
-        return new Character("CHARACT_ID",
+        Player player = playerDAO.getPlayer(rs.getString("PLAYER_ID"));
+        return new Character(rs.getString("CHARACTER_ID"),
                 rs.getString("FIRST_NAME"),
                 rs.getString("RACE"),
                 rs.getString("ALIGNMENT"),

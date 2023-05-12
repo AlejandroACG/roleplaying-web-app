@@ -1,10 +1,9 @@
 package com.svalero.domain;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+
 import java.util.List;
 
+@Data
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
