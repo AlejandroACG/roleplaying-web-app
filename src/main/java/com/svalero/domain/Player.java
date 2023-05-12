@@ -1,11 +1,9 @@
 package com.svalero.domain;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import java.time.LocalDate;
 import java.util.List;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -21,6 +19,4 @@ public class Player {
     String email;
     @NonNull
     LocalDate registrationDate;
-    @NonNull
-    List<Character> characters;
 }
