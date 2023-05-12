@@ -1,11 +1,13 @@
 package com.svalero.servlets;
+
 import com.svalero.dao.CharacterDAO;
 import com.svalero.dao.Database;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+@WebServlet("/delete-character")
 public class DeleteCharacterServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
