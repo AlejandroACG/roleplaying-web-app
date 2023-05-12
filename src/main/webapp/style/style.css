@@ -36,3 +36,39 @@ a {
     float: right;
     max-width: 50%;
 }
+
+/*CSS card*/
+.card {
+    width: 25%;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.nickname{
+    margin-top:10px;
+}
+.buttonsPlayer {
+    margin-bottom: 10px;
+
+}
+
+.list-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    gap: 15px;
+    max-height: 85vh;
+}
+
+.greyborder {
+    border-bottom: 1px solid grey;
+}

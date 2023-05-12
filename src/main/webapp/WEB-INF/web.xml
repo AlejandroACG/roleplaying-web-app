@@ -3,6 +3,6 @@
     <context-param>
         <description>Ruta por donde se guardan las imagenes</description>
         <param-name>image-path</param-name>
-        <param-value>C:\Users\acris\Dropbox\apache-tomcat-10.1.8\webapps\roleplaying-web-app_data</param-value>
+        <param-value></param-value>
     </context-param>
 </web-app>
