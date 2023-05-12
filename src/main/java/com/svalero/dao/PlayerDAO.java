@@ -11,9 +11,13 @@ public interface PlayerDAO {
     @UseRowMapper(PlayerMapper.class)
     List<Player> getPlayers();
 
-    @SqlQuery("SELECT * FROM CLIENTS WHERE PLAYER_ID = ?")
+    @SqlQuery("SELECT * FROM PLAYERS WHERE PLAYER_ID = ?")
     @UseRowMapper(PlayerMapper.class)
     Player getPlayer(String id);
+
+    @SqlQuery("SELECT * FROM PLAYERS WHERE FIRST_NAME || ' ' || LAST_NAME LIKE '%' || ? || '%'")
+    @UseRowMapper(PlayerMapper.class)
+    List<Player> getPlayersByFullName(String fullName);
 
     @SqlUpdate("INSERT INTO PLAYERS (FIRST_NAME, LAST_NAME, NICKNAME, EMAIL, REGIST_DATE) VALUES (?, ?, ?, ?, ?)")
     void addPlayer(String firstName, String lastName, String nickname, String email, LocalDate registrationDate);
