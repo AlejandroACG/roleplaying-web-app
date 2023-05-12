@@ -4,6 +4,14 @@
     padding: 0px;
 }
 
+html{
+    min-height: 100vh;
+}
+
+body{
+    min-height:100%;
+}
+
 a {
     white-space: nowrap;
   }
@@ -13,6 +21,7 @@ a {
    min-height: 100vh;
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
  }
 
  .title{
@@ -22,6 +31,7 @@ a {
 .welcome{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 100%;
@@ -33,6 +43,8 @@ a {
 }
 
 .textinfo{
+    display: flex;
+    flex-direction: column;
     max-width: 50%;
     text-align:justify;
     justify-content: center;
@@ -40,6 +52,7 @@ a {
 
   .textinfo p{
     margin: 2%;
+    font-size: 100%;
   }
 
 /*CSS card*/
@@ -53,6 +66,15 @@ a {
     text-align: center;
 
 }
+
+.nickname{
+    margin:10px;
+}
+.buttonsPlayer {
+    margin: 10px;
+
+}
+
 .list-flex {
     display: flex;
     flex-wrap: wrap;
@@ -86,4 +108,18 @@ form {
 .col-md-3 {
   margin-bottom: 20px; /* Espacio entre los elementos del formulario */
   text-align: center; /* Centrar el contenido horizontalmente */
+}
+
+
+@media (max-width: 992px){
+    .welcome{
+        flex-direction: column;
+        align-item: center;
+    }
+    .indexphoto{
+        border-radius: 15px;
+        width: 100%;
+    }
+    .textinfo{
+        max-width: 100%;
 }
