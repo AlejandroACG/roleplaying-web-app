@@ -9,7 +9,7 @@
 
 <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
         <div class="d-grid gap-2">
-          <a href="" class="btn btn-primary" type="button">Add new player</a>
+          <a href="player-form.jsp" class="btn btn-primary" type="button">Add new player</a>
         </div>
       </div>
 
@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="nickname greyborder">
                     <h4>First Name</h4>
-                    <h5><%= player.getFirstName() %>></h5>
+                    <h5><%= player.getFirstName() %></h5>
                 </div>
                 <div class="greyborder">
                     <h5>Last Name</h5>
