@@ -39,15 +39,6 @@ a {
     text-align: center;
 
 }
-
-.nickname{
-    margin:10px;
-}
-.buttonsPlayer {
-    margin: 10px;
-
-}
-
 .list-flex {
     display: flex;
     flex-wrap: wrap;
@@ -61,4 +52,8 @@ a {
 
 .greyborder {
     border-bottom: 1px solid grey;
+}
+
+.margincard {
+ margin:10px;
 }
