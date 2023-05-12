@@ -34,19 +34,19 @@
       <div class="container" style="min-width:100%">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <a href="index.jsp" class="d-inline-flex link-body-emphasis text-decoration-none">
 
-              <svg class="bi dice-1" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#dice-1"></use></svg>
+              <svg class="bi dice-1" width="40" height="32" role="img"><use xlink:href="#dice-1"></use></svg>
               <h3 class="fs-4">The Tavern Roleplaying Club</h3>
-              <svg class="bi dice-6" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#dice-6"></use></svg>
+              <svg class="bi dice-6" width="40" height="32" role="img"><use xlink:href="#dice-6"></use></svg>
 
             </a>
           </div>
 
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a href="player-list.jsp" class="nav-link px-2">Players</a></li>
-            <li><a href="#" class="nav-link px-2">Characters</a></li>
-            <li><a href="#" class="nav-link px-2">Sessions</a></li>
+            <li><a href="character-list.jsp" class="nav-link px-2">Characters</a></li>
+            <li><a href="#" class="nav-link px-2 link-secondary">Sessions</a></li>
+            <li><a href="#" class="nav-link px-2 link-secondary">Events</a></li>
           </ul>
         </header>
