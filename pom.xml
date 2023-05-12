@@ -40,7 +40,7 @@
     </dependencies>
 
     <build>
-        <finalName>PP2</finalName>
+        <finalName>roleplaying-web-app</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -55,7 +55,7 @@
                     <configuration>
                         <url>http://localhost:8081/manager/text</url>
                         <server>tomcat10</server>
-                        <path>/PP2</path>
+                        <path>/RoleplayingWebApp</path>
                         <username>tomcat</username>
                         <password>tomcat</password>
                     </configuration>
