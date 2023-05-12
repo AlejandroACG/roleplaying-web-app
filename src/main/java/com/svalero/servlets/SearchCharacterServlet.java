@@ -16,12 +16,12 @@ public class SearchCharacterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-        String name = request.getParameter("name");
+        String name = request.getParameter("name").trim();
 
         try {
             Database.connect();
             List<Character> characters;
-            characters = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharactersByName(name.trim()));
+            characters = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharactersByName(name));
 
             request.setAttribute("characters", characters);
             request.getRequestDispatcher("character-list.jsp").forward(request, response);

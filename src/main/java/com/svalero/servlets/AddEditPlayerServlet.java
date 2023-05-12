@@ -17,10 +17,10 @@ public class AddEditPlayerServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String nickname = request.getParameter("nickname");
-        String email = request.getParameter("email");
+        String firstName = request.getParameter("firstName").trim();
+        String lastName = request.getParameter("lastName").trim();
+        String nickname = request.getParameter("nickname").trim();
+        String email = request.getParameter("email").trim();
         LocalDate registrationDate = LocalDate.parse(request.getParameter("registrationDate"));
 
         String id, idTemp = null;

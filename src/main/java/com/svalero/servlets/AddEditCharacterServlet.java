@@ -16,11 +16,11 @@ public class AddEditCharacterServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String firstName = request.getParameter("firstName");
-        String race = request.getParameter("race");
-        String alignment = request.getParameter("alignment");
-        String characterClass = request.getParameter("characterClass");
-        String lore = request.getParameter("lore");
+        String firstName = request.getParameter("firstName").trim();
+        String race = request.getParameter("race").trim();
+        String alignment = request.getParameter("alignment").trim();
+        String characterClass = request.getParameter("characterClass").trim();
+        String lore = request.getParameter("lore").trim();
         String idPlayer = request.getParameter("idPlayer");
 
         String id, idTemp = null;

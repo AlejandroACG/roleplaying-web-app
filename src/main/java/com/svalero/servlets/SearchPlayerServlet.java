@@ -16,7 +16,7 @@ public class SearchPlayerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-        String fullName = request.getParameter("fullName");
+        String fullName = request.getParameter("fullName").trim();
 
         try {
             Database.connect();
