@@ -1,32 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 a {
     white-space: nowrap;
   }
 
+ .mainContent{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .title{
+    margin: 2%;
+ }
+
 .welcome{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    justify-content: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
-    gap: 15px;
-    max-height: 85vh;
 }
 
 .indexphoto{
     border-radius: 15px;
-    margin-right: 20px;
+    width: 50%;
 }
 
-.text-container {
-    flex: 1;
-    text-align:justify
+.textinfo{
+    max-width: 50%;
+    text-align:justify;
+    justify-content: center;
   }
 
-.indextext {
-    max-width: 50%;
-}
+  .textinfo p{
+    margin: 2%;
+  }
 
 /*CSS card*/
 .card {
