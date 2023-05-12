@@ -43,8 +43,8 @@
            <input type="date" class="form-control" id="" name="" value='' placeholder="Registration date">
          </div>
 
-         <button type="submit" class="btn btn-primary rounded-pill px-3" value="">Add new user</button>
 
+         <button type="submit" class="btn btn-primary rounded-pill px-3" value=""><% if (action.equals("edit")) { %><%= "Edit" %> <% } else { %><%= "Add" %><% } %></button>
     </form>
 
 <%@include file="includes/footer.jsp"%>
