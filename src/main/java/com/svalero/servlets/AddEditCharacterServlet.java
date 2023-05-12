@@ -1,4 +1,52 @@
 package com.svalero.servlets;
+import com.svalero.dao.CharacterDAO;
+import com.svalero.dao.Database;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-public class AddEditCharacterServlet {
+@WebServlet("/addedit-character")
+public class AddEditCharacterServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        String firstName = request.getParameter("firstName");
+        String race = request.getParameter("race");
+        String alignment = request.getParameter("alignment");
+        String characterClass = request.getParameter("characterClass");
+        String lore = request.getParameter("lore");
+        String idPlayer = request.getParameter("idPlayer");
+
+        String id, idTemp = null;
+        String action = request.getParameter("action");
+        if (action.equals("edit")) {
+            idTemp = request.getParameter("id");
+        }
+        id = idTemp;
+
+        try {
+            Database.connect();
+            if (action.equals("edit")) {
+                Database.jdbi.withExtension(CharacterDAO.class, dao -> {
+                    dao.modifyCharacter(firstName, race, alignment, characterClass, lore, id);
+                    return null;
+                });
+                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Character <%= firstName %> successfully modified.</div>");
+            } else {
+                Database.jdbi.withExtension(CharacterDAO.class, dao -> {
+                    dao.addCharacter(idPlayer, firstName, race, alignment, characterClass, lore);
+                    return null;
+                });
+                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Character <%= firstName %> successfully added to database.</div>");
+            }
+        } catch (ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+        }
+    }
 }
