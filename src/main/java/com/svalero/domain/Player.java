@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Player {
-    int id;
+    String id;
     @NonNull
     String firstName;
     @NonNull

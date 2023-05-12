@@ -13,17 +13,17 @@ public interface PlayerDAO {
 
     @SqlQuery("SELECT * FROM CLIENTS WHERE PLAYER_ID = ?")
     @UseRowMapper(PlayerMapper.class)
-    Player getPlayer(int id);
+    Player getPlayer(String id);
 
     @SqlUpdate("INSERT INTO PLAYERS (FIRST_NAME, LAST_NAME, NICKNAME, EMAIL, REGIST_DATE) VALUES (?, ?, ?, ?, ?)")
     void addPlayer(String firstName, String lastName, String nickname, String email, LocalDate registrationDate);
 
     @SqlUpdate("UPDATE PLAYERS SET FIRST_NAME = ?, LAST_NAME = ?, NICKNAME = ?, EMAIL = ?, REGIST_DATE = ? WHERE PLAYER_ID = ?")
-    void modifyPlayer(String firstName, String lastName, String nickname, String email, LocalDate registrationDate, int id);
+    void modifyPlayer(String firstName, String lastName, String nickname, String email, LocalDate registrationDate, String id);
 
     @SqlQuery("SELECT EXISTS(SELECT 1 FROM PLAYERS WHERE PLAYER_ID = ?)")
-    boolean isPlayer(int id);
+    boolean isPlayer(String id);
 
     @SqlUpdate("DELETE FROM PLAYERS WHERE PLAYER_ID = ?")
-    void deletePlayer(int id);
+    void deletePlayer(String id);
 }

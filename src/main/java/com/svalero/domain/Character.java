@@ -9,7 +9,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class Character {
-    int id;
+    String id;
     @NonNull
     String firstName;
     @NonNull
