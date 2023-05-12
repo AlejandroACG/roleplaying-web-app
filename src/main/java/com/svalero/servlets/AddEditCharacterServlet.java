@@ -16,7 +16,7 @@ public class AddEditCharacterServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String firstName = request.getParameter("first_name");
+        String firstName = request.getParameter("firstName");
         String race = request.getParameter("race");
         String alignment = request.getParameter("alignment");
         String characterClass = request.getParameter("characterClass");
