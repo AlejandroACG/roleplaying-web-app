@@ -9,7 +9,7 @@
 
 <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
         <div class="d-grid gap-2">
-          <a href="player-form.jsp" class="btn btn-primary" type="button">Add new player</a>
+          <a href="player-form.jsp?action=add" class="btn btn-primary" type="button">Add new player</a>
         </div>
       </div>
 
@@ -31,8 +31,8 @@
                 </div>
                 <div class="buttonsPlayer">
                     <a href="" class="btn btn-primary rounded-pill px-3">Details</a>
-                    <a href="player-form.jsp?id=<%= player.getId() %>&action=edit&nickname=<%= player.getNickname()%>" class="btn btn-danger rounded-pill px-3">Delete</a>
-                    <a href="" class="btn btn-danger rounded-pill px-3">Edit</a>
+                    <a href="" class="btn btn-danger rounded-pill px-3">Delete</a>
+                    <a href="player-form.jsp?id=<%= player.getId() %>&action=edit&nickname=<%= player.getNickname()%>" class="btn btn-danger rounded-pill px-3">Edit</a>
                 </div>
             </div>
       <%

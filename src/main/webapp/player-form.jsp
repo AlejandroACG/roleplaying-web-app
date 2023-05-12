@@ -1,8 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.svalero.dao.Database" %>
+<%@ page import="com.svalero.dao.PlayerDAO" %>
+<%@ page import="com.svalero.domain.Player" %>
 <%@include file="includes/header.jsp"%>
 
-    <h1 class="alingText"> Add a new player </h1>
-    <h3 class="alingText"> Please, introduce the new player information to upload it to our database.</h3>
+    <%
+        String action = request.getParameter("action");
+        Database.connect();
+        Player player = Database.jdbi.withExtension(PlayerDAO.class, dao -> dao.getPlayer(request.getParameter("id")));
+        if (action.equals("edit")) {
+    %>
+        <h1 class="alingText"> Edit player <%= player.getNickname() %> </h1>
+        <h3 class="alingText"> Please, modify <%= player.getNickname() %>'s information to upload it to our database.</h3>
+    <% } else { %>
+        <h1 class="alingText"> Add new player </h1>
+        <h3 class="alingText"> Please, introduce the new player information to upload it to our database.</h3>
+    <%
+       }
+
+        if (action.equals("edit")) {}
+    %>
 
     <form class="" method="post" action="" enctype="multipart/form-data">
         <div class="col-md-3">
@@ -29,11 +46,6 @@
          <button type="submit" class="btn btn-primary rounded-pill px-3" value="">Add new user</button>
 
     </form>
-
-
-
-
-
 
 <%@include file="includes/footer.jsp"%>
 </html>
