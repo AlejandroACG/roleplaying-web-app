@@ -14,13 +14,18 @@ public interface CharacterDAO {
     @UseRowMapper(CharacterMapper.class)
     List<Character> getCharactersByPlayerId(String id);
 
-    @SqlQuery("SELECT * FROM CHARACTERS WHERE NAME LIKE '%' || ? || '%'")
+    @SqlQuery("SELECT * FROM CHARACTERS WHERE FIRST_NAME LIKE '%' || ? || '%'")
     @UseRowMapper(CharacterMapper.class)
     List<Character> getCharactersByName(String name);
 
-    @SqlQuery("SELECT * FROM CHARACTERS WHERE CHARACT_ID = ?")
+    @SqlQuery("SELECT * FROM CHARACTERS WHERE CHARACTER_ID = ?")
     @UseRowMapper(CharacterMapper.class)
     Character getCharacter(String id);
+
+    // TODO Revisar luego.
+    @SqlQuery("SELECT * FROM CHARACTERS WHERE PLAYER_ID = ? FETCH FIRST 1 ROW ONLY")
+    @UseRowMapper(CharacterMapper.class)
+    Character getFirstCharacterOfPlayer(String id);
 
     @SqlUpdate("INSERT INTO CHARACTERS (PLAYER_ID, FIRST_NAME, RACE, ALIGNMENT, CHARACTER_CLASS, LORE) VALUES (?, ?, ?, ?, ?, ?)")
     void addCharacter(String id, String firstName, String race, String alignment, String characterClass, String lore);
@@ -28,9 +33,9 @@ public interface CharacterDAO {
     @SqlUpdate("UPDATE CHARACTERS SET FIRST_NAME = ?, RACE = ?, ALIGNMENT = ?, CHARACTER_CLASS = ?, LORE = ? WHERE ID = ?")
     void modifyCharacter(String firstName, String race, String alignment, String characterClass, String lore, String id);
 
-    @SqlQuery("SELECT EXISTS(SELECT 1 FROM CHARACTERS WHERE CHARACT_ID = ?)")
+    @SqlQuery("SELECT EXISTS(SELECT 1 FROM CHARACTERS WHERE CHARACTER_ID = ?)")
     boolean isCharacter(String id);
 
-    @SqlUpdate("DELETE FROM CHARACTERS WHERE CHARACT_ID = ?")
+    @SqlUpdate("DELETE FROM CHARACTERS WHERE CHARACTER_ID = ?")
     void deleteCharacter(String id);
 }

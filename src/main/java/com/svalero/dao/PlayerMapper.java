@@ -12,17 +12,11 @@ import static com.svalero.dao.Database.jdbi;
 public class PlayerMapper implements RowMapper<Player> {
     @Override
     public Player map(ResultSet rs, StatementContext ctx) throws SQLException {
-        String id = rs.getString("PLAYER_ID");
-
-        CharacterDAO characterDAO = jdbi.onDemand(CharacterDAO.class);
-        List<Character> characters = characterDAO.getCharactersByPlayerId(id);
-
-        return new Player(id,
+        return new Player(rs.getString("PLAYER_ID"),
                 rs.getString("FIRST_NAME"),
                 rs.getString("LAST_NAME"),
                 rs.getString("NICKNAME"),
                 rs.getString("EMAIL"),
-                rs.getDate("REGIST_DATE").toLocalDate(),
-                characters);
+                rs.getDate("REGIST_DATE").toLocalDate());
     }
 }
