@@ -1,13 +1,6 @@
 a {
     white-space: nowrap;
   }
-  .grid.welcome {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-
-  }
 
 .welcome{
     display: flex;
@@ -23,7 +16,6 @@ a {
 
 .indexphoto{
     border-radius: 15px;
-    float: left;
     margin-right: 20px;
 }
 
@@ -33,7 +25,6 @@ a {
   }
 
 .indextext {
-    float: right;
     max-width: 50%;
 }
 
@@ -50,17 +41,16 @@ a {
 }
 
 .nickname{
-    margin-top:10px;
+    margin:10px;
 }
 .buttonsPlayer {
-    margin-bottom: 10px;
+    margin: 10px;
 
 }
 
 .list-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     justify-content: center;
     margin: 0 auto;
     width: 100%;
