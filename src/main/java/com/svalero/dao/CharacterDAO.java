@@ -30,7 +30,7 @@ public interface CharacterDAO {
     @SqlUpdate("INSERT INTO CHARACTERS (PLAYER_ID, FIRST_NAME, RACE, ALIGNMENT, CHARACTER_CLASS, LORE) VALUES (?, ?, ?, ?, ?, ?)")
     void addCharacter(String id, String firstName, String race, String alignment, String characterClass, String lore);
 
-    @SqlUpdate("UPDATE CHARACTERS SET FIRST_NAME = ?, RACE = ?, ALIGNMENT = ?, CHARACTER_CLASS = ?, LORE = ? WHERE ID = ?")
+    @SqlUpdate("UPDATE CHARACTERS SET FIRST_NAME = ?, RACE = ?, ALIGNMENT = ?, CHARACTER_CLASS = ?, LORE = ? WHERE CHARACTER_ID = ?")
     void modifyCharacter(String firstName, String race, String alignment, String characterClass, String lore, String id);
 
     @SqlQuery("SELECT EXISTS(SELECT 1 FROM CHARACTERS WHERE CHARACTER_ID = ?)")
