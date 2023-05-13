@@ -112,6 +112,31 @@ form {
   text-align: center; /* Centrar el contenido horizontalmente */
 }
 
+/*Detail card styles*/
+
+.content-render{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-card {
+    width: 40%;
+    padding: 1%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.detail-text {
+    margin-top: 5%;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.detail-button{
+    margin: 2%;
+}
+
 
 
 
