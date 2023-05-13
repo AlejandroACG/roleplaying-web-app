@@ -17,7 +17,7 @@
         String characterClass = null;
         String lore = null;
         if (action.equals("edit")) {
-            character = Database.jdbi.withExtension(PlayerDAO.class, dao -> dao.getCharacter(request.getParameter("characterId")));
+            character = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharacter(request.getParameter("characterId")));
             firstName = character.getFirstName();
             String race = character.getRace();
             String alignment = character.getAlignment();
