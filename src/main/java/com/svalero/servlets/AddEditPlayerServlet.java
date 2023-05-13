@@ -38,13 +38,13 @@ public class AddEditPlayerServlet extends HttpServlet {
                     dao.modifyPlayer(firstName, lastName, nickname, email, registrationDate, id);
                     return null;
                 });
-                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Player <%= firstName %> <%= lastName %> successfully modified.</div>");
+                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Player successfully modified.</div>");
             } else {
                 Database.jdbi.withExtension(PlayerDAO.class, dao -> {
                     dao.addPlayer(firstName, lastName, nickname, email, registrationDate);
                     return null;
                 });
-                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Player <%= firstName %> <%= lastName %> successfully added to database.</div>");
+                out.println("<div style='margin-top: 20px;' class='alert alert-success' role='alert'>Player successfully added to database.</div>");
             }
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();

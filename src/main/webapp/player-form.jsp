@@ -6,6 +6,18 @@
 <%@ page import= "java.time.format.DateTimeFormatter" %>
 <%@include file="includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("addedit-player", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+
     <%
         LocalDate localDate = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
@@ -45,7 +57,7 @@
        }
     %>
 
-    <form class="" method="post" action="addedit-player">
+    <form>
         <div class="col-md-3">
             <label for="firstName" class="form-label">First name</label>
             <input type="text" class="form-control" id="firstName" name="firstName" value="<%= firstName %>" required>

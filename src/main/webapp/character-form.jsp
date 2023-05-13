@@ -6,6 +6,18 @@
 <%@ page import="com.svalero.domain.Character" %>
 <%@include file="includes/header.jsp"%>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+            var formValue = $(this).serialize();
+            $.post("addedit-character", formValue, function(data) {
+                $("#result").html(data);
+            });
+        });
+    });
+</script>
+
     <%
         String action = request.getParameter("action");
         Database.connect();
