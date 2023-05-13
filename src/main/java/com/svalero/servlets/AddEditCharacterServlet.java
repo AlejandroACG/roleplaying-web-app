@@ -21,7 +21,7 @@ public class AddEditCharacterServlet extends HttpServlet {
         String alignment = request.getParameter("alignment").trim();
         String characterClass = request.getParameter("characterClass").trim();
         String lore = request.getParameter("lore").trim();
-        String idPlayer = request.getParameter("idPlayer");
+        String idPlayer = request.getParameter("playerId");
 
         String id, idTemp = null;
         String action = request.getParameter("action");
