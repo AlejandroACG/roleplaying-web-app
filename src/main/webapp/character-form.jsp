@@ -55,7 +55,7 @@
        }
     %>
 
-    <form class="" method="post" action="addedit-character">
+    <form>
         <div class="col-md-3">
             <label for="firstName" class="form-label">Name</label>
             <input type="text" class="form-control" id="firstName" name="firstName" value="<%= firstName %>" required>
