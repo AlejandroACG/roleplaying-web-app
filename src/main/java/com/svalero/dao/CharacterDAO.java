@@ -14,7 +14,7 @@ public interface CharacterDAO {
     @UseRowMapper(CharacterMapper.class)
     List<Character> getCharactersByPlayerId(String id);
 
-    @SqlQuery("SELECT * FROM CHARACTERS WHERE FIRST_NAME LIKE '%' || ? || '%'")
+    @SqlQuery("SELECT * FROM CHARACTERS WHERE UPPER(FIRST_NAME) LIKE UPPER('%' || ? || '%')")
     @UseRowMapper(CharacterMapper.class)
     List<Character> getCharactersByName(String name);
 

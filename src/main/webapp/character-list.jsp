@@ -24,12 +24,6 @@
         <div id="result"></div>
     </div>
 
-    <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
-        <div class="d-grid gap-2">
-            <a href="player-form.jsp?action=add" class="btn btn-primary" type="button">Add new player</a>
-        </div>
-    </div>
-
     <div class="list-flex">
 
      <%
@@ -55,8 +49,8 @@
 
                  %>
                     <a href="character-details.jsp?characterId=<%= character.getId() %>" class="btn btn-primary rounded-pill px-3">Details</a>
+                    <a href="character-form.jsp?characterId=<%= character.getId() %>&action=edit&playerId=<%=playerId%>" class="btn btn-success rounded-pill px-3">Edit</a>
                     <a href="delete-character?id=<%= character.getId() %>" class="btn btn-danger rounded-pill px-3">Delete</a>
-                    <a href="character-form.jsp?characterId=<%= character.getId() %>&action=edit&playerId=<%=playerId%>" class="btn btn-danger rounded-pill px-3">Edit</a>
                 </div>
             </div>
       <%

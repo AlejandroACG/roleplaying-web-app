@@ -15,7 +15,7 @@ public interface PlayerDAO {
     @UseRowMapper(PlayerMapper.class)
     Player getPlayer(String id);
 
-    @SqlQuery("SELECT * FROM PLAYERS WHERE FIRST_NAME || ' ' || LAST_NAME LIKE '%' || ? || '%'")
+    @SqlQuery("SELECT * FROM PLAYERS WHERE UPPER(FIRST_NAME || ' ' || LAST_NAME) LIKE UPPER('%' || ? || '%')")
     @UseRowMapper(PlayerMapper.class)
     List<Player> getPlayersByFullName(String fullName);
 

@@ -16,12 +16,12 @@
 <div class="content-render">
 
     <%
-    String characterId = request.getParameter("id");
+        String characterId = request.getParameter("characterId");
 
-    Database.connect();
-    Character character = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharacter(characterId));
+        Database.connect();
+        Character character = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharacter(characterId));
 
-    Player player = character.getPlayer();
+        Player player = character.getPlayer();
     %>
 
     <div class="detail-card card">
@@ -33,7 +33,7 @@
             <h5><b>Race:  </b><%= character.getRace() %></h5>
             <h5><b>Alignment:  </b><%= character.getAlignment() %></h5>
             <h5><b>Class:  </b><%= character.getCharacterClass() %></h5>
-            <h5><b>Player: </b><%= player.getFirstName() %></h5>
+            <h5><b>Player: </b><%= player.getFirstName() %> <%= player.getLastName() %> (aka <%= player.getNickname() %>)</h5>
             <h5><b>Lore:</b></h5>
             <p><%= character.getLore() %></p>
 
