@@ -47,7 +47,7 @@
                         <h5><%= player.getFirstName() %> <%= player.getLastName() %></h5>
                     </div>
                     <div class="buttonsPlayer">
-                        <a href="" class="btn btn-primary rounded-pill px-3">Details</a>
+                        <a href="player-detail.jsp" class="btn btn-primary rounded-pill px-3">Details</a>
                         <a href="delete-player?id=<%= player.getId() %>" class="btn btn-danger rounded-pill px-3">Delete</a>
                         <a href="player-form.jsp?id=<%= player.getId() %>&action=edit&nickname=<%= player.getNickname()%>" class="btn btn-danger rounded-pill px-3">Edit</a>
                     </div>
