@@ -39,12 +39,12 @@
           %>
                 <div class="card">
                     <div class="nickname greyborder">
-                        <h4>First Name</h4>
-                        <h5><%= player.getFirstName() %></h5>
+                        <h4>Nickname</h4>
+                        <h5><%= player.getNickname() %></h5>
                     </div>
                     <div class="greyborder">
-                        <h5>Last Name</h5>
-                        <h5><%= player.getLastName() %></h5>
+                        <h5>Name</h5>
+                        <h5><%= player.getFirstName() %> <%= player.getLastName() %></h5>
                     </div>
                     <div class="buttonsPlayer">
                         <a href="" class="btn btn-primary rounded-pill px-3">Details</a>
