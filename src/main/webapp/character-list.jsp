@@ -36,12 +36,12 @@
       %>
             <div class="card">
                 <div class="nickname greyborder">
-                    <h4>Name</h4>
-                    <h5><%= character.getFirstName() %></h5>
+                    <h4><b>Name</b></h4>
+                    <h5><b><%= character.getFirstName() %></b></h5>
                 </div>
                 <div class="greyborder">
-                    <h5>Class</h5>
-                    <h5><%= character.getCharacterClass() %></h5>
+                    <h5><b>Class</b></h5>
+                    <h5><b><%= character.getCharacterClass() %></b></h5>
                 </div>
                 <div class="buttonsPlayer">
                 <%

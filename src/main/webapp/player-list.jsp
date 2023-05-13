@@ -46,11 +46,11 @@
                 <div class="card">
                     <div class="nickname greyborder">
                         <h4><b>Nickname</b></h4>
-                        <h5><%= player.getNickname() %></h5>
+                        <h5><b><%= player.getNickname() %></b></h5>
                     </div>
                     <div class="greyborder">
                         <h5><b>Name</b></h5>
-                        <h5><%= player.getFirstName() %> <%= player.getLastName() %></h5>
+                        <h5><b><%= player.getFirstName() %> <%= player.getLastName() %></b></h5>
                     </div>
                     <div class="buttonsPlayer">
                         <a href="player-details.jsp?id=<%= player.getId() %>" class="btn btn-primary rounded-pill px-3">Details</a>
