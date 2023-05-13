@@ -64,7 +64,7 @@
            <label for="lore" class="form-label">Lore</label>
            <input type="form-control" class="form-control" id="lore" name="lore" rows="3" value="<%= lore %>" required>
          </div>
-          <input type="hidden" name="playerId" value='<%= request.getParameter("playerId") %>'/>
+          <input type="hidden" name="playerId" value='<%= playerId %>'/>
          <%
              if (action.equals("edit")) {
          %>
