@@ -13,7 +13,7 @@
             <br/>
             <form class="row g-3" action="search-player" method="post">
                 <div class="col">
-                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Firstname / Lastname / Firstname Lastname">
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Name">
                 </div>
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary">Search</button>
