@@ -23,7 +23,7 @@
             lastName = player.getLastName();
             nickname = player.getNickname();
             email = player.getEmail();
-            registrationDate = player.getRegistrationDate().format(formatter);
+            registrationDate = String.valueOf(player.getRegistrationDate());
         }
         if (player == null) {
             firstName = "";
@@ -43,8 +43,6 @@
         <h3 class="alingText"> Please, introduce the new player information to upload it to our database.</h3>
     <%
        }
-
-        if (action.equals("edit")) {}
     %>
 
     <form class="" method="post" action="addedit-player">
