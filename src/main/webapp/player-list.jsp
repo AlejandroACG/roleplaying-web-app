@@ -11,7 +11,7 @@
         <div class="searchBox">
             <h3>Search Player</h3>
             <br/>
-            <form class="row g-3" id="form1">
+            <form class="row g-3" action="search-player" method="post">
                 <div class="col">
                     <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Firstname / Lastname / Firstname Lastname">
                 </div>
@@ -30,11 +30,17 @@
         </div>
     </div>
 
+
     <div class="list-flex">
 
          <%
               Database.connect();
               List<Player> players = Database.jdbi.withExtension(PlayerDAO.class, PlayerDAO::getPlayers);
+
+              if (request.getAttribute("players") != null) {
+                players = (List<Player>) request.getAttribute("players");
+              }
+
               for (Player player : players) {
           %>
                 <div class="card">
@@ -47,7 +53,7 @@
                         <h5><%= player.getFirstName() %> <%= player.getLastName() %></h5>
                     </div>
                     <div class="buttonsPlayer">
-                        <a href="player-detail.jsp" class="btn btn-primary rounded-pill px-3">Details</a>
+                        <a href="player-details.jsp" class="btn btn-primary rounded-pill px-3">Details</a>
                         <a href="delete-player?id=<%= player.getId() %>" class="btn btn-danger rounded-pill px-3">Delete</a>
                         <a href="player-form.jsp?id=<%= player.getId() %>&action=edit&nickname=<%= player.getNickname()%>" class="btn btn-danger rounded-pill px-3">Edit</a>
                     </div>
