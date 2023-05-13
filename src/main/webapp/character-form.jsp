@@ -19,10 +19,10 @@
         if (action.equals("edit")) {
             character = Database.jdbi.withExtension(CharacterDAO.class, dao -> dao.getCharacter(request.getParameter("characterId")));
             firstName = character.getFirstName();
-            String race = character.getRace();
-            String alignment = character.getAlignment();
-            String characterClass = character.getCharacterClass();
-            String lore = character.getLore();
+            race = character.getRace();
+            alignment = character.getAlignment();
+            characterClass = character.getCharacterClass();
+            lore = character.getLore();
         }
         if (character == null) {
             firstName = "";
