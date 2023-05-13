@@ -26,7 +26,7 @@
             <h5><b>Registration date: </b>  <%= player.getRegistrationDate() %> </h5>
         </div>
         <div class="margins-card button-container detail-button">
-            <a href="" class="btn btn-primary rounded-pill px-5">Add new character</a>
+            <a href="character-form.jsp?playerId=<%=id_player%>&action=add" class="btn btn-primary rounded-pill px-5">Add new character</a>
         </div>
     </div>
 </div>
