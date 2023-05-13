@@ -36,11 +36,11 @@
 
         if (action.equals("edit")) {
     %>
-        <h1 class="alingText"> Edit player <%= player.getNickname() %> </h1>
-        <h3 class="alingText"> Please, modify <%= player.getNickname() %>'s information to upload it to our database.</h3>
+        <h1 class="alingText"> Edit player <%= nickname %> </h1>
+        <h3 class="alingText"> Please, modify <%= nickname %>'s information to upload it to our database.</h3>
     <% } else { %>
         <h1 class="alingText"> Add new player </h1>
-        <h3 class="alingText"> Please, introduce the new player information to upload it to our database.</h3>
+        <h3 class="alingText"> Please, introduce the new player's information to upload it to our database.</h3>
     <%
        }
     %>
