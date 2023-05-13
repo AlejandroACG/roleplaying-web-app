@@ -26,7 +26,7 @@ public class AddEditCharacterServlet extends HttpServlet {
         String id, idTemp = null;
         String action = request.getParameter("action");
         if (action.equals("edit")) {
-            idTemp = request.getParameter("id");
+            idTemp = request.getParameter("characterId");
         }
         id = idTemp;
 
