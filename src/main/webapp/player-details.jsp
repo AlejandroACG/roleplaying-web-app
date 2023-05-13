@@ -17,13 +17,13 @@
 <div class="content-render">
     <div class="detail-card card">
         <div class="nickname margins-cards">
-            <h4 class="detail-card-label"> <%= player.getNickname() %> </h4>
+            <h4 class="detail-card-label"><b><%= player.getNickname() %></b></h4>
         </div>
         <div class="detail-text">
-            <h5><b>First Name: </b> <%= player.getFirstName() %> </h5>
-            <h5><b>Last Name: </b> <%= player.getLastName() %> </h5>
-            <h5><b>Email: </b> <%= player.getEmail() %> </h5>
-            <h5><b>Registration date: </b>  <%= player.getRegistrationDate() %> </h5>
+            <h5><b>First Name: <%= player.getFirstName() %></b></h5>
+            <h5><b>Last Name: <%= player.getLastName() %></b></h5>
+            <h5><b>Email: <%= player.getEmail() %></b></h5>
+            <h5><b>Registration date: <%= player.getRegistrationDate() %></b></h5>
         </div>
         <div class="margins-card button-container detail-button">
             <a href="character-form.jsp?playerId=<%=id_player%>&action=add" class="btn btn-primary rounded-pill px-5">Add new character</a>

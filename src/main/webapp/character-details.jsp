@@ -26,16 +26,16 @@
 
     <div class="detail-card card">
         <div class="nickname margins-cards">
-            <h4 class="detail-card-label">Character First Name</h4>
-            <h5><%= character.getFirstName() %></h5>
+            <h4 class="detail-card-label"></h4>
+            <h5><b><%= character.getFirstName() %></b></h5>
         </div>
         <div class="detail-text">
-            <h5><b>Race:  </b><%= character.getRace() %></h5>
-            <h5><b>Alignment:  </b><%= character.getAlignment() %></h5>
-            <h5><b>Class:  </b><%= character.getCharacterClass() %></h5>
-            <h5><b>Player: </b><%= player.getFirstName() %> <%= player.getLastName() %> (aka <%= player.getNickname() %>)</h5>
+            <h5><b>Race: <%= character.getRace() %></b></h5>
+            <h5><b>Alignment: <%= character.getAlignment() %></b></h5>
+            <h5><b>Class: <%= character.getCharacterClass() %></b></h5>
+            <h5><b>Player: <%= player.getFirstName() %> <%= player.getLastName() %> (aka <%= player.getNickname() %>)</b></h5>
             <h5><b>Lore:</b></h5>
-            <p><%= character.getLore() %></p>
+            <p><b><%= character.getLore() %></b></p>
 
         </div>
     </div>
