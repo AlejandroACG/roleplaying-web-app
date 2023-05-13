@@ -26,10 +26,10 @@
         }
         if (character == null) {
             firstName = "";
-            String race = "";
-            String alignment = "";
-            String characterClass = "";
-            String lore = "";
+            race = "";
+            alignment = "";
+            characterClass = "";
+            lore = "";
         }
 
         if (action.equals("edit")) {
