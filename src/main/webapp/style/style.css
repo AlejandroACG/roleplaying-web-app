@@ -12,6 +12,8 @@ body{
     min-height:100%;
 }
 
+/*INDEX CSS*/
+
 a {
     white-space: nowrap;
   }
@@ -110,6 +112,13 @@ form {
   text-align: center; /* Centrar el contenido horizontalmente */
 }
 
+/*PLAYER-LIST CSS*/
+
+.searchBox{
+    border:solid 2px black solid;
+}
+
+/*CSS RESPONSIVE*/
 
 @media (max-width: 992px){
     .welcome{
