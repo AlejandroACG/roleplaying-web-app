@@ -45,11 +45,11 @@
           %>
                 <div class="card">
                     <div class="nickname greyborder">
-                        <h4>Nickname</h4>
+                        <h4><b>Nickname</b></h4>
                         <h5><%= player.getNickname() %></h5>
                     </div>
                     <div class="greyborder">
-                        <h5>Name</h5>
+                        <h5><b>Name</b></h5>
                         <h5><%= player.getFirstName() %> <%= player.getLastName() %></h5>
                     </div>
                     <div class="buttonsPlayer">
