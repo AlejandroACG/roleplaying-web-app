@@ -50,7 +50,7 @@
                     <h5><%= character.getCharacterClass() %></h5>
                 </div>
                 <div class="buttonsPlayer">
-                    <a href="character-details.jsp" class="btn btn-primary rounded-pill px-3">Details</a>
+                    <a href="character-details.jsp?id=<%= character.getId() %>" class="btn btn-primary rounded-pill px-3">Details</a>
                     <a href="delete-character?id=<%= character.getId() %>" class="btn btn-danger rounded-pill px-3">Delete</a>
                     <a href="character-form.jsp?id=<%= character.getId() %>&action=edit" class="btn btn-danger rounded-pill px-3">Edit</a>
                 </div>
