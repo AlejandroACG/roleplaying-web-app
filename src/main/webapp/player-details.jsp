@@ -8,16 +8,22 @@
 
 <%@include file="includes/header.jsp"%>
 
+<%
+    String id_player = request.getParameter("id");
+    Database.connect();
+    Player player = Database.jdbi.withExtension(PlayerDAO.class, dao -> dao.getPlayer(id_player));
+%>
+
 <div class="content-render">
     <div class="detail-card card">
         <div class="nickname margins-cards">
-            <h4 class="detail-card-label">Nickname</h4>
+            <h4 class="detail-card-label"> <%= player.getNickname() %> </h4>
         </div>
         <div class="detail-text">
-            <h5><b>Last Name: </b>Last Name</h5>
-            <h5><b>First Name: </b>First Name</h5>
-            <h5><b>Email: </b>Email</h5>
-            <h5><b>Registration date: </b>Registration date</h5>
+            <h5><b>First Name: </b> <%= player.getFirstName() %> </h5>
+            <h5><b>Last Name: </b> <%= player.getLastName() %> </h5>
+            <h5><b>Email: </b> <%= player.getEmail() %> </h5>
+            <h5><b>Registration date: </b>  <%= player.getRegistrationDate() %> </h5>
         </div>
         <div class="margins-card button-container detail-button">
             <a href="" class="btn btn-primary rounded-pill px-5">Add new character</a>
